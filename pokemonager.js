@@ -21,7 +21,7 @@
         .then((response) => response.json())
         .then(poke => {
           return Promise.all(
-            poke.results.map(pokeDex => fetch(pokeDex["url"]))
+            poke.results.map(pokeDex => fetch(pokeDex.url))
           )
         })
         .then((stuff) => {
